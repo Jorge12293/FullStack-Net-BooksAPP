@@ -1,0 +1,12 @@
+// Crear Json
+dotnet new globaljson --sdk-version 8.0.204 --force
+/ Crear Solución
+dotnet new sln --name AppStoreSolution
+// Crear Carpeta de proyectos src
+mkdir src
+// Crear Proyecto
+dotnet new mvc -o src/AppStore
+// Vincular Proyecto con Solución
+dotnet sln add src\AppStore\AppStore.csproj
+// Correr proyecto
+dotnet run --project src/AppStore
